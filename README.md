@@ -2,6 +2,8 @@
 
 ===Fait en Pair-Programming avec DELDEM Jérémie - ROUET Julien - THIBAUDIN Anaïs - FRANCIS===
 
+😀 Voici le Lien a prendre en compte : https://github.com/8UK0W5K1/gossip_project 😀
+
 Salut camarade moussaillon chez THP!
 Pour lancer tout l'bouzin rends-toi dans l'emplacement de ce dossier dans ton terminal, puis exécutes les commandes suivantes:
 
