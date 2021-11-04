@@ -1,0 +1,19 @@
+<div class="text-center m-3 pb-5">
+<h1>Bienvenue à toi Moussaillon</h1>
+
+<br>
+<center><a href="<%= new_ragot_path %>" class="mt-1 mb-4 btn btn-lg btn btn-outline-info">Créer mon propre ragot !</a></center>
+<div class="row row-cols-1 row-cols-md-3">
+  <% @gossips.each do |gossip|%>
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%="#{gossip.title} "%></h5>
+        <p class="card-text"><%="#{gossip.user.first_name}"%></p>
+        <center><a href="<%= ragot_path(gossip.id) %>" class="mt-1 btn btn-primary">Lire le ragot !</a></center>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>

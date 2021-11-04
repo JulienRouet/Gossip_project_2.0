@@ -1,0 +1,29 @@
+<div class="text-center m-5 pb-5">
+<h1>::: Tu veux revenir sur ce que tu as balançé !? :::</h1>
+<br><br>
+<div class="container mt-5 form-group">
+ <%= form_tag(url_for(action: 'update'), method: 'put', class: 'form-group') do %>
+          <%= label_tag 'Titre' %>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text border-secondary">
+                <span class="iconify" data-icon="mdi:format-title"></span>
+              </span>
+            </div>
+            <%= text_field_tag 'title', @gossip.title, class: 'form-control border-secondary hover-shadow' %>
+          </div>
+          <%= label_tag 'Contenu' %>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text border-secondary">
+                <span class="iconify" data-icon="mdi:tooltip-text-outline"></span>
+              </span>
+            </div>
+            <%= text_area_tag 'content', @gossip.content, class: 'form-control text-white border-secondary hover-shadow', rows: "3", style: "height:100%;" %>
+          </div>
+          <%= submit_tag('Modifier ce potin', class: 'class="mt-3 btn btn-outline-warning') %>
+    <% end %>
+
+    <div style="margin-top: 20px;"><%= link_to "Retour Accueil", root_path, :class => "mb-4 btn btn-outline-info" %></div>
+
+</div>

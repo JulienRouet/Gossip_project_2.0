@@ -1,0 +1,25 @@
+<div class="text-center m-5 pb-5">
+  <h1>::: Tu veux modifier ton commentaire ? :::</h1>
+  <br><br>
+    <div class="container mt-5 form-group">
+        <%= form_tag(url_for(action: 'update'), method: 'put', class: 'form-group') do %>
+          <%= label_tag 'Contenu' %>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text border-secondary">
+                <span class="iconify" data-icon="mdi:tooltip-text-outline"></span>
+              </span>
+            </div>
+            <%= text_area_tag 'content', @comment.content, class: 'form-control text-white border-secondary hover-shadow', rows: "3", style: "height:100%;" %>
+            </div>
+              <%= submit_tag('Modifier le commentaire', class: 'btn btn-secondary mt-3 mx-2') %>
+            <% end %>
+              <%= form_tag(url_for(action: 'destroy'), method: 'delete', class: 'form-group') do %>
+                <%= submit_tag('Supprimer ce commentaire', class: "mt-3 mb-4 btn btn-outline-danger") %>
+              <% end %>
+    </div>  
+      <div style="margin-top: 20px;">
+        <%= link_to "Retour Accueil", root_path, :class => "btn btn-lg btn-info" %> 
+      </div>
+      
+</div>

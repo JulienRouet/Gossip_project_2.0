@@ -1,0 +1,18 @@
+<div class="text-center m-5 pb-5">
+<h1>::: La page préférée des grosses P.O.O.CAVES ! :::</h1>
+<br><br>
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-5">
+       <%= form_tag url_for(action: 'create', method: "post", class: 'form-group,form-control') do %>
+      <%= label_tag 'Titre du ragot' %>
+      <%= text_field_tag 'title', nil, class:"form-control" %>
+      <%= label_tag 'Détails du ragot' %>
+      <br>
+      <%= text_area_tag 'content', nil, class:"form-control" %>
+      <%= submit_tag "Créer mon ragot!", class: "mt-3 btn btn-lg btn btn-outline-info"  %>
+    <% end %>
+      </div>
+    </div>
+</div>
